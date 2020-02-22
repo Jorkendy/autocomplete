@@ -6,7 +6,13 @@ const Suggestions = ({ data, onClick, activeSuggestion }) => {
   return data.length > 0 ? (
     <SuggestionsWrapper>
       {data.map((item, i) => (
-        <SuggestionItem isActive={activeSuggestion === i} onClick={onClick} key={i}>{item}</SuggestionItem>
+        <SuggestionItem
+          isActive={activeSuggestion === i}
+          onClick={onClick}
+          key={i}
+        >
+          {item}
+        </SuggestionItem>
       ))}
     </SuggestionsWrapper>
   ) : (
@@ -39,6 +45,7 @@ const SuggestionsWrapper = styled.ul`
   overflow-y: auto;
   padding-left: 0;
   width: calc(300px + 1rem);
+  margin: 0 auto;
 `;
 
 const NoSuggestionsWrapper = styled.div`
@@ -50,8 +57,8 @@ const SuggestionItem = styled.li`
   padding: 0.5rem;
 
   &:hover {
-    background-color: #008f68;
-    color: #fae042;
+    background-color: #ccc;
+    color: white;
     cursor: pointer;
     font-weight: 700;
   }
@@ -63,11 +70,10 @@ const SuggestionItem = styled.li`
   ${props =>
     props.isActive
       ? `
-  background-color: #008f68;
-    color: #fae042;
+  background-color: #ccc;
+    color: black;
     cursor: pointer;
     font-weight: 700;
-  }
   `
       : ``}
 `;

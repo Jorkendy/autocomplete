@@ -12,6 +12,18 @@ const App = () => {
       <Background>
         <img src={backgroundImg} alt="" />
       </Background>
+      <Search>
+        <AutocompleteInput
+          suggestions={[
+            "Angular",
+            "React",
+            "Vue",
+            "NextJs",
+            "NodeJS",
+            "Javasript"
+          ]}
+        />
+      </Search>
     </HeaderSection>
   );
 };
@@ -33,4 +45,11 @@ const Background = styled.div`
     height: 100%;
     object-fit: cover;
   }
+`;
+
+const Search = styled.div`
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  top: 200px;
 `;

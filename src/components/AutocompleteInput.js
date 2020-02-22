@@ -58,9 +58,14 @@ const AutocompleteInput = ({ suggestions }) => {
         onChange={_onChange}
         onKeyDown={_onKeyDown}
         value={keyword}
+        placeholder="Try Vietname"
       />
       {showSuggestions && keyword.trim() ? (
-        <Suggestions data={filteredSuggestions} onClick={_onClickSuggestions} activeSuggestion={activeSuggestion}  />
+        <Suggestions
+          data={filteredSuggestions}
+          onClick={_onClickSuggestions}
+          activeSuggestion={activeSuggestion}
+        />
       ) : null}
     </Wrapper>
   );
@@ -82,4 +87,6 @@ const Input = styled.input`
   border: 1px solid #999;
   padding: 0.5rem;
   width: 300px;
+  border-radius: 5px;
+  height: 20px;
 `;
