@@ -40,25 +40,25 @@ const SuggestionsWrapper = styled.ul`
   border: 1px solid #999;
   border-top-width: 0;
   list-style: none;
-  margin-top: 0;
   max-height: 143px;
   overflow-y: auto;
   padding-left: 0;
-  width: calc(300px + 1rem);
+  width: 100%;
   margin: 0 auto;
 `;
 
 const NoSuggestionsWrapper = styled.div`
-  color: #999;
+  color: #fff;
   padding: 0.5rem;
 `;
 
 const SuggestionItem = styled.li`
   padding: 0.5rem;
+  transition: all 0.3s ease;
 
   &:hover {
-    background-color: #ccc;
-    color: white;
+    background-color: #999;
+    color: #fff;
     cursor: pointer;
     font-weight: 700;
   }
@@ -70,8 +70,8 @@ const SuggestionItem = styled.li`
   ${props =>
     props.isActive
       ? `
-  background-color: #ccc;
-    color: black;
+  background-color: #9e9e9e;
+    color: #000;
     cursor: pointer;
     font-weight: 700;
   `

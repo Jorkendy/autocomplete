@@ -4,6 +4,7 @@ import styled from "styled-components";
 import get from "lodash/get";
 
 import Suggestions from "./Suggestions";
+import { breakPoints } from "../utils/layout";
 
 const AutocompleteInput = ({ suggestions }) => {
   const [keyword, setKeyword] = useState("");
@@ -58,7 +59,7 @@ const AutocompleteInput = ({ suggestions }) => {
         onChange={_onChange}
         onKeyDown={_onKeyDown}
         value={keyword}
-        placeholder="Try Vietname"
+        placeholder="Try Vietnam"
       />
       {showSuggestions && keyword.trim() ? (
         <Suggestions
@@ -81,12 +82,23 @@ AutocompleteInput.defaultProps = {
 
 export default AutocompleteInput;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  
+   @media screen and (min-width: ${breakPoints.tabletL}px) {
+    width: 600px;
+  }
+`;
 
 const Input = styled.input`
-  border: 1px solid #999;
-  padding: 0.5rem;
-  width: 300px;
+  border: 0;
+  width: 100%;
+  min-height: 20px;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 700;
   border-radius: 5px;
-  height: 20px;
+  outline: none;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 `;

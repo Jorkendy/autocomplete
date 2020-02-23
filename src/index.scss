@@ -1,3 +1,14 @@
+/* reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato' ;
+}
+
+/* font icon */
+
 @font-face {
     font-family: 'icomoon';
     src:  url('./assets/fonts/icomoon.eot?55d8iu');
@@ -10,7 +21,7 @@
     font-display: block;
   }
   
-  [class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
     speak: none;
@@ -19,16 +30,15 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-angle-down:before {
+}
+
+.icon-angle-down:before {
     content: "\e900";
-  }
-  .icon-angle-up:before {
+}
+.icon-angle-up:before {
     content: "\e901";
-  }
-  
+}

@@ -20,7 +20,7 @@ const App = () => {
             "Vue",
             "NextJs",
             "NodeJS",
-            "Javasript"
+            "Javascript"
           ]}
         />
       </Search>
@@ -39,6 +39,7 @@ const Background = styled.div`
   height: 100%;
   position: absolute;
   top: 0;
+  z-index: -1;
 
   img {
     width: 100%;
